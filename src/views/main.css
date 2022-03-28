@@ -1,0 +1,336 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.linkblue{
+	color: #2674C6;
+	border-bottom: 0px solid #0000;
+	transition: all .2s;
+}
+.linkblue:hover{
+	border-bottom: 2px solid #2674C6;
+	transition: all .2s;
+}
+
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: #fff;
+        color: #000;
+    }
+    .svg{
+        filter: invert(0%) sepia(8%) saturate(0%) hue-rotate(83deg) brightness(96%) contrast(106%);
+    }
+    .cast{
+        background-color: #0001;
+    }
+    .vote{
+        background-color: #0002;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #323130;
+        color: #fff;
+    }
+    .svg{
+        filter: invert(100%) sepia(93%) saturate(27%) hue-rotate(39deg) brightness(107%) contrast(107%);
+    }
+    .cast{
+        background-color: #fff1;
+    }
+    .vote img{
+        filter: invert(83.6%) sepia(93%) saturate(27%) hue-rotate(39deg) brightness(107%) contrast(107%)
+    }
+    .vote{
+        background-color: #fff1;
+    }
+}
+
+/* --- --- */
+
+h1{
+    margin: 13px;
+}
+h2{
+    margin: 13px;
+}
+h3{
+    margin: 7px;
+}
+header{
+    position: fixed;
+    height: 50px;
+    padding: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    color: #fff;
+    width: 100vw;
+top: 0;
+}
+header img{
+    height: 100%;
+}
+header .menu{
+    float: right;
+    cursor: pointer;
+    height: 40px;
+    padding-top: 6px;
+    cursor: pointer;
+}
+header span{
+    font-weight: 300;
+    font-size: 20px;
+    position: relative;
+    left: 15px;
+    top: -15px;
+}
+
+header div {
+    display: inline;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0c8202;
+    z-index: 10;
+}
+
+.search .input{
+    top: 6px;
+    width: 35vw;
+    max-width: 500px;
+    min-width: 200px;
+    height: 30px;
+    padding: 3px;
+	border-radius: 5px;
+	cursor: text;
+    background-color: #fff;
+	border: 2px solid #4f474e00;
+    display: inline-block;
+    position: relative;
+}
+.search .input img{
+	width: 30px;
+    height: 30px;
+}
+.search .input input{
+    height: 36px;
+    position: relative;
+    top: -9px;
+    background-color: #0000;
+    border: 0;
+    outline: 0;
+    width: calc(100% - 40px);
+}
+.search .input:hover, .search .input:active, .search .input:focus{
+    background-color: #fff;
+	border: 2px solid #4f474e61;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.search .result{
+    display: block;
+    top: 16px;
+    width: 35vw;
+    max-width: 500px;
+    min-width: 200px;
+    max-height: calc(100vh - 100px);
+    overflow: hidden scroll;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: text;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #4f474e00;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    z-index: 10;
+    animation: search 0.8s ease;
+}
+
+.search .result tr{
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+}
+.search .result tr:hover{
+    background-color: #00000017;
+}
+.search .result img{
+    width: 25px;
+    height: 37.5px;
+}
+
+.content{
+    margin: auto;
+    max-width: 900px;
+    top: 50px;
+    position: relative;
+}
+.footer{
+    margin: auto;
+    max-width: 900px;
+    bottom: 50px;
+    position: fixed;
+}
+
+@keyframes search {
+    0%{
+        max-height: 0px;
+    }
+    100%{
+        max-height: calc(100vh - 100px);
+    }
+}
+
+button {
+    display: block;
+    height: 42px;
+    width: 100%;
+    border-radius: 15px;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #4f474e00;
+    margin-bottom: 1px;
+    background-color: #0c8202;
+}
+button:hover, button:focus, button:active {
+    background-color: #097200;
+    border: 2px solid #4f474e61;
+}
+
+/* --- settings --- */
+
+.settings-head {
+	background-position: center center;
+	background-size: cover;
+	border-radius: 10px;
+	margin: 10px;
+}
+.settings-head div {
+	border-radius: 10px;
+	padding: 10px;
+}
+.icone {
+	float: right;
+	height: 300px;
+    width: 200px;
+	margin: 8px;
+	position: relative;
+	z-index: 5;
+}
+
+.cast{
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.profile{
+    height: 60px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.hr{
+    background-color: #868686;
+    border-radius: 2px;
+    height: 2px;
+    margin: 0 10px;
+}
+.back{
+    background-color: #00000017;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.vote{
+    height: 50px;
+    width: 250px;
+}
+.vote div{
+    position: relative;
+    top: -54px;
+    background-image: linear-gradient(#ffd318, #febc08);
+    height: 50px;
+}
+.vote img{
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.note{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+/* --- Chargement des images --- */
+
+.icone, .profile, .search .result img{
+    background: linear-gradient(-45deg, #323130, #7e7b79);
+    background-size: 400% 400%;
+    animation: gradient 1.5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* --- */
+
+.details input[type=text]{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0;
+    display: inline-block;
+    width: 200px;
+    background-color: inherit;
+    border: 2px solid #4f474e00;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0001;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0;
+    display: inline-block;
+    width: 95%;
+    background-color: inherit;
+    border: 2px solid #4f474e00;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0001;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.details input[type=text]:hover, .details input[type=text]:focus, .details input[type=text]:active {
+    background-color: #0002;
+    border: 2px solid #4f474e61;
+}
+
+textarea:hover, textarea:focus, textarea:active {
+    background-color: #0002;
+    border: 2px solid #4f474e61;
+}
