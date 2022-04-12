@@ -3,6 +3,8 @@
         <div class="content">
             <h1>Recherche de films PWA</h1>
             <h2>Rechercher et critiquer des films</h2>
+                <br>
+            <a href="https://www.ugc.fr/" class="linkblue">→ Accéder au site UGC.fr</a>
         </div>
 
         <div class="footer">

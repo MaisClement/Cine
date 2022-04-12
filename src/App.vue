@@ -2,7 +2,7 @@
     <header>
 
       <div style="width: 100px;">
-            <router-link to="/"><img src="img/cine.png"></router-link>
+            <a href="https://www.ugc.fr/"><img src="img/cine.png"></a>
             <span>Ciné</span>
         </div>
       
