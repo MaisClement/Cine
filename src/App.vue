@@ -2,14 +2,14 @@
     <header>
 
       <div style="width: 100px;">
-            <a href="https://www.ugc.fr/"><img src="img/cine.png"></a>
+            <router-link to="/"><img src="img/cine.png"></router-link>
             <span>Ciné</span>
         </div>
       
       <div class="search">
           <div class="input">
             <img src="img/search.png">
-            <input id="searchtext" type="text" placeholder="Recherche" v-model="query" v-on:keyup="recherche" v-on:change="recherche" v-on:focus="show" autocomplete="false">
+            <input id="searchtext" type="text" placeholder="Rechercher un film" v-model="query" v-on:keyup="recherche" v-on:change="recherche" v-on:focus="show" autocomplete="false">
           </div>
             <br>
 

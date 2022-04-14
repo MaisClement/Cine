@@ -49,7 +49,9 @@
                 <tr>
                     <td v-if="credit.profile_path"><img class="profile" v-bind:src="'http://image.tmdb.org/t/p/w500' + credit.profile_path"></td>
                     <td>
-                        <b>{{ credit.name }}</b>
+                        <b class="linkwhite" v-on:click="showPeople(credit.id)">
+                            {{ credit.name }}
+                        </b>
                             <br>
                         {{ credit.character }}
                     </td>
@@ -117,7 +119,14 @@ export default{
 
                 this.voted = true;
             }
-        }
+        },
+        showPeople(id) {
+          this.$router.push({
+              path: 'People', query: {
+                  id: id
+              }
+          });
+        },
     },
     created() {
         this.film = {

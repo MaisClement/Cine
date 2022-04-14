@@ -10,8 +10,18 @@ a {
 	color: #2674C6;
 	border-bottom: 0px solid #0000;
 	transition: all .2s;
+    cursor: pointer;
 }
 .linkblue:hover{
+	border-bottom: 2px solid #2674C6;
+	transition: all .2s;
+}
+.linkwhite{
+	border-bottom: 0px solid #0000;
+	transition: all .2s;
+    cursor: pointer;
+}
+.linkwhite:hover{
 	border-bottom: 2px solid #2674C6;
 	transition: all .2s;
 }
@@ -242,6 +252,18 @@ button:hover, button:focus, button:active {
     height: 2px;
     margin: 0 10px;
 }
+.bio{
+    vertical-align: top;
+    min-width: 200px;
+}
+.bio img {
+    max-width: 30px;
+}
+.bio h3 {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+  }
 .back{
     background-color: #00000017;
     border-radius: 20px;
