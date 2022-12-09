@@ -100,7 +100,7 @@ export default{
             this.people = await response.data; 
         },
         async getcredits() {
-            const response = await axios.get(this.baseUrl + '/person/' + this.id + '/movie_credits?language=fr&api_key=' + this.api_key);
+            const response = await axios.get(this.baseUrl + '/' + this.id + '/movie_credits?language=fr&api_key=' + this.api_key);
             this.credits = await response.data;  
         },
         showDetails(film) {

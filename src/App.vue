@@ -9,7 +9,7 @@
       <div class="search">
           <div class="input">
             <img src="img/search.png">
-            <input id="searchtext" type="text" placeholder="Rechercher un film" v-model="query" v-on:keyup="recherche" v-on:change="recherche" v-on:focus="show" autocomplete="false">
+            <input id="searchtext" type="text" placeholder="Rechercher un film, un acteur ou une serie" v-model="query" v-on:keyup="recherche" v-on:change="recherche" v-on:focus="show" autocomplete="false">
           </div>
             <br>
 
@@ -52,6 +52,7 @@ import axios from 'axios'
             this.show_result = false;
 
           } else {
+            //const response = await axios.get(this.baseUrl + '/search/multi?language=fr&api_key=' + this.api_key + '&query=' + this.query);
             const response = await axios.get(this.baseUrl + '/search/movie?language=fr&api_key=' + this.api_key + '&query=' + this.query);
             this.films = await response.data.results;
             this.show_result = true;
